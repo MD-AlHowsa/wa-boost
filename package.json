@@ -1,0 +1,56 @@
+{
+  "name": "wa-boost",
+  "version": "1.0.0",
+  "description": "Professional broadcast messaging system for WhatsApp Web with analytics",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/ --ext .ts,.tsx",
+    "lint:fix": "eslint src/ --ext .ts,.tsx --fix",
+    "format": "prettier --write \"src/**/*.{ts,tsx,css}\"",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "whatsapp",
+    "broadcast",
+    "chrome-extension",
+    "messaging"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dexie": "^3.2.4",
+    "libphonenumber-js": "^1.10.44",
+    "papaparse": "^5.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "uuid": "^9.0.0",
+    "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.246",
+    "@types/papaparse": "^5.3.8",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "@types/uuid": "^9.0.4",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "autoprefixer": "^10.4.15",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.49.0",
+    "html-webpack-plugin": "^5.5.3",
+    "postcss": "^8.4.29",
+    "postcss-loader": "^7.3.3",
+    "prettier": "^3.0.3",
+    "style-loader": "^3.3.3",
+    "tailwindcss": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.4",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
