@@ -23,22 +23,22 @@ export class WhatsAppBroadcastDB extends Dexie {
     });
 
     // Add hooks for automatic timestamps
-    this.campaigns.hook('creating', (primKey, obj) => {
+    this.campaigns.hook('creating', (_primKey, obj: Campaign) => {
       if (!obj.createdAt) obj.createdAt = Date.now();
       if (!obj.updatedAt) obj.updatedAt = Date.now();
     });
 
-    this.campaigns.hook('updating', (modifications, primKey, obj) => {
+    this.campaigns.hook('updating', (modifications: any) => {
       modifications.updatedAt = Date.now();
       return modifications;
     });
 
-    this.contacts.hook('creating', (primKey, obj) => {
+    this.contacts.hook('creating', (primKey: any, obj: Contact) => {
       if (!obj.createdAt) obj.createdAt = Date.now();
       if (!obj.updatedAt) obj.updatedAt = Date.now();
     });
 
-    this.contacts.hook('updating', (modifications, primKey, obj) => {
+    this.contacts.hook('updating', (modifications: any) => {
       modifications.updatedAt = Date.now();
       return modifications;
     });

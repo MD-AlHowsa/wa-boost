@@ -69,7 +69,7 @@ export class CampaignRepository {
     });
   }
 
-  async markAsFailed(id: string, error?: string): Promise<void> {
+  async markAsFailed(id: string, _error?: string): Promise<void> {
     await this.update(id, {
       status: 'failed',
       completedAt: Date.now(),
